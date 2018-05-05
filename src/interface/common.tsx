@@ -1,3 +1,5 @@
+import Circle from '../class/Circle';
+
 export interface Entity{
   id: string;
   name: string;
@@ -6,7 +8,7 @@ export interface Entity{
  
 export interface RelateEntities{
   center: Entity;
-  relate?: RelateEntities[];
+  relate?: Entity[];
   depth: number;
 }
 
@@ -18,4 +20,11 @@ export interface Relations{
   relations: Relation[];
   offset: number;
   count: number;
+}
+
+
+export interface Circles{
+  center?:Circle;
+  around?: Circle[];
+  distance?: Number;
 }
